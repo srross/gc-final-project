@@ -12,13 +12,18 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // Import the HTTP interceptor from the Auth0 Angular SDK
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
+import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { OutfitComponent } from './components/outfit/outfit.component';
+import { AdjustComponent } from './components/adjust/adjust.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
-
+    AppRoutingModule,    
     // Import the module into the application, with configuration
     AuthModule.forRoot({
       // The domain and clientId were configured in the previous chapter
