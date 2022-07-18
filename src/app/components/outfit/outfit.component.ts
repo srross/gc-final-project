@@ -8,12 +8,37 @@ import { OutfitApiService } from 'src/app/services/outfit-api.service';
   styleUrls: ['./outfit.component.css'],
 })
 export class OutfitComponent implements OnInit {
-
+  // inject service
   constructor(private service: OutfitApiService) {}
 
   ngOnInit(): void {
-    this.getAllOutfits();
+    this.deleteUserOutfit(15);
   }
+
+  //temporary test data - can remove when component.html(s) are complete
+  testResult: Outfit = {
+    id: 0,
+    minTemperature: 0,
+    outfitBottom: 'string',
+    outfitTop: 'string',
+    outfitHead: 'string',
+    outfitHands: 'string',
+    outfitImage: 'string',
+    userId: 0,
+    maxTemperature: 0,
+  };
+
+  testOutfit: Outfit = {
+    id: 9,
+    minTemperature: 60,
+    outfitBottom: 'bottom6062',
+    outfitTop: 'top6061',
+    outfitHead: 'head6061',
+    outfitHands: 'hands6061',
+    outfitImage: 'NULL',
+    userId: 1,
+    maxTemperature: 69,
+  };
 
   // create outfit array
   outfitArray: Outfit[] = [];
@@ -35,5 +60,25 @@ export class OutfitComponent implements OnInit {
     this.service
       .getAllOutfitsByUserId(userId)
       .subscribe((data: Outfit[]) => (this.outfitArray = data));
+  }
+
+  // backend currently doesn't return anything for add,update, and delete.
+  // view Db table to validate changes
+  addOutfitToUserProfile() {
+    this.service
+      .addOutfitToUserProfile(this.testOutfit)
+      .subscribe((data: Outfit) => (this.testResult = data)); 
+  }
+
+  updateUserOutfit(outfitId: number) {
+    this.service
+      .updateUserOutfit(outfitId, this.testOutfit)
+      .subscribe((data: Outfit) => (this.testResult = data));
+  }
+
+  deleteUserOutfit(outfitId: number) {
+    this.service
+      .deleteUserOutfit(outfitId)
+      .subscribe((data: Outfit) => (this.testResult = data));
   }
 }

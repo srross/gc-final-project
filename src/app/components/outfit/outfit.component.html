@@ -1,5 +1,4 @@
-
-<!-- Testing Template to display data from backend -->
+<!-- TESTING Template for displaying data from backend -->
 <div class="row">
   <div class="col-12">
     <div class="text-center">
@@ -12,18 +11,18 @@
   <div class="col-8">
     <div class="row">
       <div class="col-3" *ngFor="let o of outfitArray">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h6 class="card-title">
-              Temperature: {{ o.minTemperature }}-{{ o.maxTemperature }}
-            </h6>
-            <h6 class="card-text">Id: {{ o.id }}</h6>
-            <h6 class="card-text">Bottom: {{ o.outfitBottom }}</h6>
-            <h6 class="card-text">Top: {{ o.outfitTop }}</h6>
-            <h6 class="card-text">Head: {{ o.outfitHead }}</h6>
-            <h6 class="card-text">Hands: {{ o.outfitHands }}</h6>
-          </div>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h6 class="card-title">
+            Temperature: {{ o.minTemperature }}-{{ o.maxTemperature }}
+          </h6>
+          <h6 class="card-text">Id: {{ o.id }}</h6>
+          <h6 class="card-text">Bottom: {{ o.outfitBottom }}</h6>
+          <h6 class="card-text">Top: {{ o.outfitTop }}</h6>
+          <h6 class="card-text">Head: {{ o.outfitHead }}</h6>
+          <h6 class="card-text">Hands: {{ o.outfitHands }}</h6>
         </div>
+      </div>
       </div>
     </div>
   </div>
