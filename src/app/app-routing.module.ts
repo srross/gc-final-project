@@ -8,6 +8,7 @@ import { OutfitComponent } from './components/outfit/outfit.component';
     {path:'', redirectTo:'home', pathMatch:"full"},
     {path:"home", component:HomeComponent},
     {path:"outfit/:id",component:OutfitComponent},
+    //{path:"outfit",component:OutfitComponent},
     {path:"adjust/:id",component:AdjustComponent}      
 ];
 

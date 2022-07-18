@@ -57,6 +57,3 @@ import { AdjustComponent } from './components/adjust/adjust.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-
-
