@@ -2,15 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
-import { Outfit } from '../interfaces/outfit';
+import { Outfit } from '../../interfaces/outfit';
 
 @Injectable({
   providedIn: 'root',
 })
 
 export class OutfitApiService {
-  http: any;
-  url: any;
+  
   constructor(private client: HttpClient) {}
 
   // https://localhost:7085/api/Outfit/GetOutfitByTemperature/52

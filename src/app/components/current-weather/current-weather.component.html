@@ -1,0 +1,33 @@
+<!-- TESTING Template for displaying data from backend -->
+<div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        <h1>Current Weather</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-3" *ngFor="let cw of currentWeatherArray">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h6 class="card-title">
+                currentWeather: 
+              </h6>
+              <h6 class="card-text">ApparentTemperature: {{ cw.ApparentTemperature }}</h6>
+              <h6 class="card-text">CloudCover: {{ cw.CloudCover }}</h6>
+              <h6 class="card-text">LocalObservationDateTime: {{ cw.LocalObservationDateTime }}</h6>
+              <h6 class="card-text">RelativeHumidity: {{ cw.RelativeHumidity }}</h6>
+              <h6 class="card-text">Temperature: {{ cw.Temperature }}</h6>
+              <h6 class="card-text">WeatherText: {{ cw.WeatherText }}</h6>
+              <h6 class="card-text">Wind: {{ cw.Wind }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  
