@@ -14,7 +14,7 @@ export class OutfitApiService {
   constructor(private client: HttpClient) {}
 
   // https://localhost:7085/api/Outfit/GetOutfitByTemperature/52
-  getOutfitByTemperature(temperature: number): Observable<Outfit[]> {
+  getOutfitByTemperature(temperature: Number): Observable<Outfit[]> {
     let outfit = this.client.get<Outfit[]>(
       environment.apiUrl + 'Outfit/GetOutfitByTemperature/' + temperature
     );

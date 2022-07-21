@@ -12,14 +12,14 @@ export class ListClothesByTempComponent implements OnInit {
   constructor(private service:OutfitApiService) { }
 
   outfitArray:Outfit[] = [];
-  @Input() temperature:number | undefined;
+  @Input() temperature:Number | undefined;
   ngOnInit(): void {
     this.getOutfitByTemperature();
   }
 
 
   getOutfitByTemperature(){
-    if(this.temperature!== undefined){
+    if(this.temperature!== undefined){ 
       this.service.getOutfitByTemperature(this.temperature).subscribe((data:Outfit[])=>this.outfitArray = data);
     }
   }
