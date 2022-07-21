@@ -17,9 +17,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { OutfitComponent } from './components/outfit/outfit.component';
 import { AdjustComponent } from './components/adjust/adjust.component';
+import { ListClothesByTempComponent } from './components/list-clothes-by-temp/list-clothes-by-temp.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, ListClothesByTempComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -57,6 +58,3 @@ import { AdjustComponent } from './components/adjust/adjust.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-
-
