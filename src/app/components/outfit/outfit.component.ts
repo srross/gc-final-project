@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Outfit } from 'src/app/interfaces/outfit';
-import { OutfitApiService } from 'src/app/services/outfit-api.service';
+import { OutfitApiService } from 'src/app/services/outfit/outfit-api.service';
 
 @Component({
   selector: 'app-outfit',
