@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './auth-button/auth-button.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 // Import the injector module and the HTTP client module from Angular
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -18,9 +18,11 @@ import { HomeComponent } from './components/home/home.component';
 import { OutfitComponent } from './components/outfit/outfit.component';
 import { AdjustComponent } from './components/adjust/adjust.component';
 import { ListClothesByTempComponent } from './components/list-clothes-by-temp/list-clothes-by-temp.component';
+import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
+
 
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, ListClothesByTempComponent],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
