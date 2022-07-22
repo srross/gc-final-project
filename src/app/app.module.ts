@@ -17,10 +17,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { OutfitComponent } from './components/outfit/outfit.component';
 import { AdjustComponent } from './components/adjust/adjust.component';
+import { ListClothesByTempComponent } from './components/list-clothes-by-temp/list-clothes-by-temp.component';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 
+
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
