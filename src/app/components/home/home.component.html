@@ -12,10 +12,34 @@
                 (more dressed up) or colder (lighter outfit/fewer layers), so your 
                 outfit can be tailored to your own needs.
             </p>
-            
+
             <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut" class="text-center">
-                <p> You're logged in.</p>
-                
+                <form #formHome="ngForm"(ngSubmit)="submitForm(formHome.form)">
+                    <div class="form-group">
+                        <label for="zipCode">Enter Zip Code</label>
+                        <input 
+                            required 
+                            minlength="5"
+                            maxlength="5"
+                            ngModel
+                            #inputZip="ngModel"
+                            name="zipCode" 
+                            id="zipCode"
+                            type="text" 
+                            class="form-control">
+                        <div 
+                            class="alert alert-danger" 
+                            *ngIf="inputZip.touched && !inputZip.valid">
+                            <div *ngIf="inputZip.errors?.['required']">
+                                Zip Code is required.
+                            </div>
+                            <div *ngIf="inputZip.errors?.['minlength'] || inputZip.errors?.['maxlength']">
+                                Zip Code should be exactly 5 numbers.
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>               
             </ng-container>
             <ng-template #loggedOut class="text-center">
                 <app-auth-button></app-auth-button>

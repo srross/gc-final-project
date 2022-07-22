@@ -8,9 +8,9 @@ import { AuthGuard } from '@auth0/auth0-angular';
   const routes: Routes = [
     {path:'', redirectTo:'home', pathMatch:"full"},
     {path:"home", component:HomeComponent},
-    {path:"home/:id", component:HomeComponent, canActivate: [AuthGuard]},
-    {path:"outfit/:id",component:OutfitComponent},
-    {path:"adjust/:id",component:AdjustComponent}      
+    {path:"current-weather/:id", component:HomeComponent, canActivate: [AuthGuard]},
+    {path:"outfit/:id",component:OutfitComponent, canActivate: [AuthGuard]},
+    {path:"adjust/:id",component:AdjustComponent, canActivate: [AuthGuard]}      
 ];
 
 @NgModule({
@@ -18,3 +18,4 @@ import { AuthGuard } from '@auth0/auth0-angular';
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

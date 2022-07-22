@@ -9,6 +9,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 
 // Import the injector module and the HTTP client module from Angular
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
 
 // Import the HTTP interceptor from the Auth0 Angular SDK
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
@@ -23,7 +24,8 @@ import { AdjustComponent } from './components/adjust/adjust.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule,    
+    AppRoutingModule,   
+    FormsModule, 
     // Import the module into the application, with configuration
     AuthModule.forRoot({
       // The domain and clientId were configured in the previous chapter
