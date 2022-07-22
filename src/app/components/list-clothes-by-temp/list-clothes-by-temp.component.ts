@@ -19,6 +19,7 @@ export class ListClothesByTempComponent implements OnInit {
 
 
   getOutfitByTemperature(){
+    //console.log(this.temperature)
     if(this.temperature!== undefined){ 
       this.service.getOutfitByTemperature(this.temperature).subscribe((data:Outfit[])=>this.outfitArray = data);
     }
