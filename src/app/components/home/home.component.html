@@ -1,13 +1,32 @@
 <div class="row">
-    <div class="col-12">
-        <div class="text-center">
-            <h1>Weather Outfitter</h1>
+    <div class="col-sm">
+        <div class="text-left">
+
+            <p>Weather Outfitter checks the weather where you want to walk or 
+                run and returns an outfit based on the weather in your area.</p>
+
+            <h4>To start, just Login or Register, then enter your zip code.
+                Weather Outfitter will recommend an outfit.</h4>
+
+            <p>At any time, you can adjust the outfit recommendations to be warmer 
+                (more dressed up) or colder (lighter outfit/fewer layers), so your 
+                outfit can be tailored to your own needs.
+            </p>
+            
+            <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut" class="text-center">
+                <p> You're logged in.</p>
+                
+            </ng-container>
+            <ng-template #loggedOut class="text-center">
+                <app-auth-button></app-auth-button>
+            </ng-template>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="text-center">
-        <h5>Application Explination</h5>
+    <div class="col-sm">
+        <div class="text-center"></div>
     </div>
-
+    <div class="col-sm">
+        <div class="text-center"></div>
+    </div>
 </div>
+
