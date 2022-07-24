@@ -12,8 +12,9 @@ export class CurrentWeatherComponent implements OnInit {
 
   constructor(private service: CurrentWeatherApiService) { }
 
-  ngOnInit(): void {
+  public isButtonVisible = true;
 
+  ngOnInit(): void {
   }
 
   currentWeatherArray: CurrentWeather[] = [];
@@ -32,4 +33,5 @@ export class CurrentWeatherComponent implements OnInit {
       } 
   }
 }
+
 

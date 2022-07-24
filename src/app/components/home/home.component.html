@@ -1,31 +1,20 @@
-<div class="row">
-    <div class="col-sm">
-        <div class="text-left">
+<div>
+    <p>Weather Outfitter checks the weather where you want to walk or 
+        run and returns an outfit based on the weather in your area.</p>
 
-            <p>Weather Outfitter checks the weather where you want to walk or 
-                run and returns an outfit based on the weather in your area.</p>
-
-            <h4>To start, just Login or Register, then enter your zip code.
-                Weather Outfitter will recommend an outfit.</h4>
-
-            <p>At any time, you can adjust the outfit recommendations to be warmer 
-                (more dressed up) or colder (lighter outfit/fewer layers), so your 
-                outfit can be tailored to your own needs.
-            </p>
-
-            <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut" class="text-center">
-             <app-current-weather></app-current-weather> 
-            </ng-container>
-            <ng-template #loggedOut class="text-center">
-                <app-auth-button></app-auth-button>
-            </ng-template>
-        </div>
-    </div>
-    <div class="col-sm">
-        <div class="text-center"></div>
-    </div>
-    <div class="col-sm">
-        <div class="text-center"></div>
-    </div>
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut" class="text-center">
+        <h4>Enter your zip code.
+            Weather Outfitter will recommend an outfit.</h4>
+        <p>At any time, you can adjust the outfit recommendations to be warmer 
+            (more dressed up) or colder (lighter outfit/fewer layers), so your 
+            outfit can be tailored to your own needs.
+        </p>
+        <app-current-weather></app-current-weather> 
+    </ng-container>
+    <ng-template #loggedOut class="text-center">
+        <h4>To start, just Login or Register, then enter your zip code.
+            Weather Outfitter will recommend an outfit.</h4>
+        <app-auth-button></app-auth-button>
+    </ng-template>
 </div>
 
