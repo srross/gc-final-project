@@ -19,12 +19,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  submitForm(form:any){
-
-    if(this.zipCode !== undefined) { 
-    this.zipCode=form.value["zipCode"]
-    console.log(this.zipCode);
-
-    } 
-  }
 }

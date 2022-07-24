@@ -2,51 +2,51 @@ import { DeclarationListEmitMode } from "@angular/compiler";
 import { TemplateDefinitionBuilder } from "@angular/compiler/src/render3/view/template";
 
 export interface CurrentWeather {
-    LocalObservationDateTime: Date;
-    WeatherText: string;
-    Temperature: Temperature;
-    RelativeHumidity: number;
-    Wind: Wind;
-    CloudCover: number;
-    ApparentTemperature: ApparentTemperature;
+    localObservationDateTime: Date;
+    weatherText: string;
+    temperature: Temperature;
+    relativeHumidity: number;
+    wind: Wind;
+    cloudCover: number;
+    apparentTemperature: ApparentTemperature;
 }
 
 export interface ApparentTemperature {
-    Metric: Metric;
-    Imperial: Imperial;
+    metric: Metric;
+    imperial: Imperial;
 }
 
 export interface Direction {
-    Degrees: number;
-    Localized: string;
-    English: string;
+    degrees: number;
+    localized: string;
+    english: string;
 }
 
 export interface Imperial {
-    Value: number;
-    Unit: string;
-    UnitType: number;
-    Phrase: string;
+    value: number;
+    unit: string;
+    unitType: number;
+    phrase: string;
 }
 
 export interface Metric {
-    Value: number;
-    Unit: string;
-    UnitType: number;
-    Phrase: string;
+    value: number;
+    unit: string;
+    unitType: number;
+    phrase: string;
 }
 
 export interface Speed {
-    Metric: Metric;
-    Imperial: Imperial;
+    metric: Metric;
+    imperial: Imperial;
 }
 
 export interface Temperature {
-    Metric: Metric;
-    Imperial: Imperial;
+    metric: Metric;
+    imperial: Imperial;
 }
 
 export interface Wind {
-    Direction: Direction;
-    Speed: Speed;
+    direction: Direction;
+    speed: Speed;
 }
