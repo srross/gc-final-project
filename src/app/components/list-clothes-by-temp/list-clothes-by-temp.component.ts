@@ -12,7 +12,7 @@ export class ListClothesByTempComponent implements OnInit {
   constructor(private service:OutfitApiService) { }
 
   outfitArray:Outfit[] = [];
-  @Input() temperature:Number | undefined;
+  @Input() temperature: number | undefined;
   ngOnInit(): void {
     this.getOutfitByTemperature();
   }
