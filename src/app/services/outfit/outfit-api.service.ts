@@ -54,4 +54,12 @@ export class OutfitApiService {
     return this.client.delete(environment.apiUrl + 'Outfit/DeleteUserOutfit/' + outfitId
     );
   }
+  getAllOutfitsByAuthId(): Observable<Outfit[]> {
+    let outfits = this.client.get<Outfit[]>(
+      environment.apiUrl + 'Outfit/GetAllOutfitsByAuthId'
+    );
+
+    return outfits;
+  }
+
 }
