@@ -21,10 +21,11 @@ import { AdjustComponent } from './components/adjust/adjust.component';
 import { ListClothesByTempComponent } from './components/list-clothes-by-temp/list-clothes-by-temp.component';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { DegreePipe } from './pipes/degree.pipe';
+import { GetOutfitsByUserComponent } from './components/get-outfits-by-user/get-outfits-by-user.component';
 
 
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent, DegreePipe],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent, DegreePipe, GetOutfitsByUserComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -45,7 +46,17 @@ import { DegreePipe } from './pipes/degree.pipe';
           {
             // Match any request that starts 'https://dev-g1qs2qkr.us.auth0.com/api/v2/' (note the asterisk)
             // Might need to change this uri if working locally
-            uri: 'https://finalprojapi20220629200201.azurewebsites.net/*',
+            uri: 'https://finalprojapi20220629200201.azurewebsites.net/api/*',
+            tokenOptions: {
+              // The attached token should target this audience
+              audience: 'https://finalprojectapi',
+            }
+          },
+
+          {
+            // Match any request that starts 'https://dev-g1qs2qkr.us.auth0.com/api/v2/' (note the asterisk)
+            // Might need to change this uri if working locally
+            uri: 'https://localhost:7085/api/*',
             tokenOptions: {
               // The attached token should target this audience
               audience: 'https://finalprojectapi',
