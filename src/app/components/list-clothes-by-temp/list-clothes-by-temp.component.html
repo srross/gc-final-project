@@ -21,12 +21,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let outfit of outfitArray">
-            <td>{{outfit.maxTemperature}}</td>
+            <td>{{outfit.maxTemperature | degree}}</td>
             <td>{{outfit.outfitHead}}</td>
             <td>{{outfit.outfitTop}}</td>
             <td>{{outfit.outfitHands}}</td>
             <td>{{outfit.outfitBottom}}</td>
-            <td>{{outfit.minTemperature}}</td>
+            <td>{{outfit.minTemperature | degree}}</td>
 
 
             
