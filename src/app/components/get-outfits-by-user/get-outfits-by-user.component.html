@@ -36,7 +36,7 @@
                 <td>{{outfit.outfitHands}}</td>
                 <td>{{outfit.outfitBottom}}</td>    
                 <td>
-                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-info" [routerLink]="['/editOutfit', outfit.id]">Edit</button>
                 </td>
                 <td>
                     <button class="btn btn-danger" (click)="deleteOutfit(outfit)">Delete</button> 

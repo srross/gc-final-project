@@ -53,6 +53,11 @@ export class OutfitApiService {
   deleteUserOutfit(outfitId: number){
     return this.client.delete(environment.apiUrl + 'Outfit/DeleteUserOutfit/' + outfitId
     );
+
+  }
+
+  getOutfitById(id: number): Observable<Outfit>{
+    return this.client.get<Outfit>(environment.apiUrl+ 'Outfit/GetOutfitById?id=' + id);
   }
   getAllOutfitsByAuthId(): Observable<Outfit[]> {
     let outfits = this.client.get<Outfit[]>(

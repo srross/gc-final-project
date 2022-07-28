@@ -6,6 +6,7 @@ import { OutfitComponent } from './components/outfit/outfit.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import { GetOutfitsByUserComponent } from './components/get-outfits-by-user/get-outfits-by-user.component';
 import { CreateOutfitComponent } from './components/create-outfit/create-outfit.component';
+import { EditOutfitComponent } from './components/edit-outfit/edit-outfit.component';
   
   const routes: Routes = [
     {path:'', redirectTo:'home', pathMatch:"full"},
@@ -14,7 +15,8 @@ import { CreateOutfitComponent } from './components/create-outfit/create-outfit.
     {path:"outfit/:id",component:OutfitComponent, canActivate: [AuthGuard]},
     {path:"adjust/:id",component:AdjustComponent, canActivate: [AuthGuard]},
     {path:"userOutfits",component:GetOutfitsByUserComponent, canActivate: [AuthGuard]},
-    {path:"createOutfit",component:CreateOutfitComponent,canActivate: [AuthGuard]}      
+    {path:"createOutfit",component:CreateOutfitComponent,canActivate: [AuthGuard]},
+    {path:"editOutfit/:id",component:EditOutfitComponent,canActivate: [AuthGuard]}    
 ];
 
 @NgModule({
