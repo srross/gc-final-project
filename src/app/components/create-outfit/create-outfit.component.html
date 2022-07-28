@@ -1,0 +1,64 @@
+<form #formCreate="ngForm"(ngSubmit)="submitForm(formCreate.form)">
+    <label> Create New Outfit</label>
+    <div class="form-group">
+      <input 
+        required 
+        ngModel
+        #inputMinTemperature="ngModel"
+        name="minTemperature" 
+        id="minTemperature"
+        type="number" 
+        class="form-control">
+        </div>
+        <div class="form-group">
+            <input 
+              required 
+              ngModel
+              #inputMaxTemperature="ngModel"
+              name="maxTemperature" 
+              id="maxTemperature"
+              type="number" 
+              class="form-control">
+              </div>
+              <div class="form-group">
+                <input 
+                  required 
+                  ngModel
+                  #inputOutfitTop="ngModel"
+                  name="outfitTop" 
+                  id="outfitTop"
+                  type="text" 
+                  class="form-control">
+                  </div>
+                <div class="form-group">
+                <input 
+                  required 
+                  ngModel
+                  #inputOutfitBottom="ngModel"
+                  name="outfitBottom" 
+                  id="outfitBottom"
+                  type="text" 
+                  class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input 
+                      required 
+                      ngModel
+                      #inputOutfitHead="ngModel"
+                      name="outfitHead" 
+                      id="outfitHead"
+                      type="text" 
+                      class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <input 
+                          required 
+                          ngModel
+                          #inputOutfitHands="ngModel"
+                          name="outfitHands" 
+                          id="outfitHands"
+                          type="text" 
+                          class="form-control">
+                          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>

@@ -22,10 +22,11 @@ import { ListClothesByTempComponent } from './components/list-clothes-by-temp/li
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { DegreePipe } from './pipes/degree.pipe';
 import { GetOutfitsByUserComponent } from './components/get-outfits-by-user/get-outfits-by-user.component';
+import { CreateOutfitComponent } from './components/create-outfit/create-outfit.component';
 
 
 @NgModule({
-  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent, DegreePipe, GetOutfitsByUserComponent],
+  declarations: [AppComponent, AuthButtonComponent, UserProfileComponent, NavbarComponent, HomeComponent, OutfitComponent, AdjustComponent, CurrentWeatherComponent, ListClothesByTempComponent, DegreePipe, GetOutfitsByUserComponent, CreateOutfitComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
