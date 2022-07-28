@@ -26,6 +26,8 @@ export class OutfitComponent implements OnInit {
     outfitImage: 'string',
     userId: 0,
     maxTemperature: 0,
+    authUserId:""
+
   };
 
   testOutfit: Outfit = {
@@ -38,6 +40,7 @@ export class OutfitComponent implements OnInit {
     outfitImage: 'NULL',
     userId: 1,
     maxTemperature: 69,
+    authUserId:""
   };
 
   // create outfit array
@@ -79,6 +82,7 @@ export class OutfitComponent implements OnInit {
   deleteUserOutfit(outfitId: number) {
     this.service
       .deleteUserOutfit(outfitId)
-      .subscribe((data: Outfit) => (this.testResult = data));
+      .subscribe((data: any) => console.log());
+    
   }
 }

@@ -8,4 +8,5 @@ export interface Outfit {
   outfitImage: string;
   userId: number;
   maxTemperature: number;
+  authUserId: string;
 }

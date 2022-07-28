@@ -24,7 +24,8 @@ export class CreateOutfitComponent implements OnInit {
       outfitHands: form.value['outfitHands'],
       maxTemperature: form.value['maxTemperature'],
       minTemperature:form.value['minTemperature'],
-      outfitImage:""
+      outfitImage:"",
+      authUserId:""
     }).subscribe(() => this.router.navigate(['/userOutfits']));
   }
 

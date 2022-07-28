@@ -21,6 +21,6 @@ export class GetOutfitsByUserComponent implements OnInit {
   }
 
   deleteOutfit(outfit:Outfit){
-    this.service.deleteUserOutfit(outfit.id).subscribe(() => this.getAllOutfitsByAuthId());
+    this.service.deleteUserOutfit(outfit.id).subscribe((data:any) => this.getAllOutfitsByAuthId());
   }
 }

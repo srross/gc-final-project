@@ -50,7 +50,7 @@ export class OutfitApiService {
   }
 
   // https://localhost:7085/api/Outfit/DeleteUserOutfit/10
-  deleteUserOutfit(outfitId: number) : Observable<any> {
+  deleteUserOutfit(outfitId: number){
     return this.client.delete(environment.apiUrl + 'Outfit/DeleteUserOutfit/' + outfitId
     );
   }

@@ -1,6 +1,8 @@
 <form #formCreate="ngForm"(ngSubmit)="submitForm(formCreate.form)">
     <label> Create New Outfit</label>
     <div class="form-group">
+
+        <label>Min Temperature</label>
       <input 
         required 
         ngModel
@@ -11,6 +13,7 @@
         class="form-control">
         </div>
         <div class="form-group">
+            <label>Max Temperature</label>
             <input 
               required 
               ngModel
@@ -21,6 +24,7 @@
               class="form-control">
               </div>
               <div class="form-group">
+                <label>Outfit Top</label>
                 <input 
                   required 
                   ngModel
@@ -31,6 +35,7 @@
                   class="form-control">
                   </div>
                 <div class="form-group">
+                    <label>Outfit Bottom</label>
                 <input 
                   required 
                   ngModel
@@ -41,6 +46,7 @@
                   class="form-control">
                   </div>
                   <div class="form-group">
+                    <label>Outfit Head</label>
                     <input 
                       required 
                       ngModel
@@ -51,6 +57,7 @@
                       class="form-control">
                       </div>
                       <div class="form-group">
+                        <label>Outfit Hands</label>
                         <input 
                           required 
                           ngModel
