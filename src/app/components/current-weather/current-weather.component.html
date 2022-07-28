@@ -1,76 +1,84 @@
-
-<div>
-  <form #formHome="ngForm"(ngSubmit)="submitForm(formHome.form)">
-    <div class="form-group">
-      <label for="zipCode">Enter Zip Code</label>
-      <input 
-        required 
-        minlength="5"
-        maxlength="5"
-        ngModel
-        #inputZip="ngModel"
-        name="zipCode" 
-        id="zipCode"
-        type="text" 
-        class="form-control">
-      <div class="alert alert-danger" 
-          *ngIf="inputZip.touched && !inputZip.valid">
-        
-        <div *ngIf="inputZip.errors?.['required']">
-            Zip Code is required.
-        </div>
-        <div *ngIf="inputZip.errors?.['minlength'] || inputZip.errors?.['maxlength']">
-            Zip Code should be exactly 5 numbers.
-        </div>
-      </div>
-    </div>
-    <div  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
-</div>
-
-
-
-<div *ngIf="currentWeatherArray.length !== 0">
-
 <div class="row">
-    <div class="col-12">
-      <div class="text-center">
-        <h1>Current Weather</h1>
-      </div>
-    </div>
+  <div class="col-4">
+
   </div>
-  <div class="row">
-    <div class="col-2"></div>
-     <div class="col-8">
-      <div class="row">
-        <div class="col-3" *ngFor="let cw of currentWeatherArray">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h6 class="card-title">
-                currentWeather: 
-              </h6>
-              <h6 class="card-text">Apparent Temperature: {{ cw.apparentTemperature.imperial.value }}</h6>
-              <h6 class="card-text">Cloud Cover: {{ cw.cloudCover }}</h6>
-              <h6 class="card-text">Local Observation Date Time: {{ cw.localObservationDateTime | date  }}</h6>
-              <h6 class="card-text">Relative Humidity: {{ cw.relativeHumidity }}</h6>
-              <h6 class="card-text">Temperature: {{ cw.temperature.imperial.value | degree}}</h6>
-              <h6 class="card-text">Weather Text: {{ cw.weatherText }}</h6>
-              <h6 class="card-text">Wind: {{ cw.wind.speed.imperial.value }} MPH</h6>
+  <div class="col-4">
+    <div>
+      <form #formHome="ngForm"(ngSubmit)="submitForm(formHome.form)">
+        <div class="form-group">
+          <label for="zipCode">Enter Zip Code</label>
+          <input 
+            required 
+            minlength="5"
+            maxlength="5"
+            ngModel
+            #inputZip="ngModel"
+            name="zipCode" 
+            id="zipCode"
+            type="text" 
+            class="form-control">
+          <div class="alert alert-danger" 
+              *ngIf="inputZip.touched && !inputZip.valid">
+            
+            <div *ngIf="inputZip.errors?.['required']">
+                Zip Code is required.
+            </div>
+            <div *ngIf="inputZip.errors?.['minlength'] || inputZip.errors?.['maxlength']">
+                Zip Code should be exactly 5 numbers.
             </div>
           </div>
         </div>
+        <div  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+    
+    
+    <div *ngIf="currentWeatherArray.length !== 0">
+    
+    <div class="row">
+        <div class="col-12">
+          <div class="text-center">
+            <h1>Current Weather</h1>
+          </div>
+        </div>
       </div>
-     </div> 
-
-    <div class="col-2"></div>
+      <div class="row">
+        <div class="col-2"></div>
+         <div class="col-8">
+          <div class="row">
+            <div class="col-3" *ngFor="let cw of currentWeatherArray">
+              <div class="card" style="width: 18rem">
+                <div class="card-body">
+                  <h6 class="card-title">
+                    currentWeather: 
+                  </h6>
+                  <h6 class="card-text">Apparent Temperature: {{ cw.apparentTemperature.imperial.value }}</h6>
+                  <h6 class="card-text">Cloud Cover: {{ cw.cloudCover }}</h6>
+                  <h6 class="card-text">Local Observation Date Time: {{ cw.localObservationDateTime | date  }}</h6>
+                  <h6 class="card-text">Relative Humidity: {{ cw.relativeHumidity }}</h6>
+                  <h6 class="card-text">Temperature: {{ cw.temperature.imperial.value | degree}}</h6>
+                  <h6 class="card-text">Weather Text: {{ cw.weatherText }}</h6>
+                  <h6 class="card-text">Wind: {{ cw.wind.speed.imperial.value }} MPH</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div> 
+    
+        <div class="col-2"></div>
+      </div>
+    </div>
+     
+    <div *ngIf="currentWeatherArray.length !== 0">
+    
+      <app-list-clothes-by-temp [temperature]="currentWeatherArray[0].apparentTemperature.imperial.value"></app-list-clothes-by-temp>  
+    </div>
+    
   </div>
-</div>
- 
-<div *ngIf="currentWeatherArray.length !== 0">
-
-  <app-list-clothes-by-temp [temperature]="currentWeatherArray[0].apparentTemperature.imperial.value"></app-list-clothes-by-temp>  
+  <div class="col-4"></div>
 </div>
 
   

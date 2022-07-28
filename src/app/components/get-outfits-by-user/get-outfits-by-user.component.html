@@ -1,7 +1,7 @@
 <h1>Your Clothing List</h1>
 <div class="row mb-2">
     <div class="col-2">
-        <button class="btn btn-primary">Create New</button>
+        <button class="btn btn-primary" [routerLink]="['/createOutfit']">Create New</button>
     </div>
     <div class="col-10"></div>
 </div>
@@ -36,7 +36,7 @@
                 <td>{{outfit.outfitHands}}</td>
                 <td>{{outfit.outfitBottom}}</td>    
                 <td>
-                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-info" [routerLink]="['/editOutfit', outfit.id]">Edit</button>
                 </td>
                 <td>
                     <button class="btn btn-danger" (click)="deleteOutfit(outfit)">Delete</button> 
