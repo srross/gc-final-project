@@ -24,8 +24,8 @@ export class EditOutfitComponent implements OnInit {
   submitForm(form: any){
     if(this.outfitToEdit !== undefined){
       this.service.updateUserOutfit(this.outfitToEdit?.id, {
-        id: 0,
-        userId: 0,
+        id: this.outfitToEdit.id,
+        userId: this.outfitToEdit.userId,
         outfitBottom: form.value['outfitBottom'],
         outfitTop: form.value['outfitTop'],
         outfitHead: form.value['outfitHead'],
@@ -33,7 +33,7 @@ export class EditOutfitComponent implements OnInit {
         maxTemperature: form.value['maxTemperature'],
         minTemperature:form.value['minTemperature'],
         outfitImage:"",
-        authUserId:""
+        authUserId: this.outfitToEdit.authUserId
       }).subscribe(() => this.router.navigate(['/userOutfits']));
     }
     }
